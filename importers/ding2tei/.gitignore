@@ -1,0 +1,5 @@
+/dingsrc/
+/ding2tei
+/util/results/
+*.o
+*.hi

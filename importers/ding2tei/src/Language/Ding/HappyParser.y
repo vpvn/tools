@@ -130,14 +130,14 @@ header :: { Header }
 header : versionHeader
          copyrightHeader
          licenseHeader
-         urlHeader                      { Header { version = fst $1
-                                                 , versionDate = snd $1
-                                                 , copyrightHolder = fst $2
-                                                 , copyrightPeriod = snd $2
-                                                 , license = $3
-                                                 , url = $4
-                                                 }
-                                        }
+         urlHeader          { Header { headerVersion         = fst $1
+                                     , headerVersionDate     = snd $1
+                                     , headerCopyrightHolder = fst $2
+                                     , headerCopyrightPeriod = snd $2
+                                     , headerLicense         = $3
+                                     , headerURL             = $4
+                                     }
+                            }
 
 versionHeader :: { (String, String) }
 versionHeader : versionPref text '\n'   { let [version, date] = words $

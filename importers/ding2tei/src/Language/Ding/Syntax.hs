@@ -37,12 +37,12 @@ data Dict = Dict Header [Line]
 
 -- | The header of the Ding.
 data Header = Header
-  { version :: String
-  , versionDate :: String
-  , copyrightHolder :: String
-  , copyrightPeriod :: String
-  , license :: String
-  , url :: String
+  { headerVersion         :: String
+  , headerVersionDate     :: String
+  , headerCopyrightHolder :: String
+  , headerCopyrightPeriod :: String
+  , headerLicense         :: String
+  , headerURL             :: String
   }
  deriving Show
 

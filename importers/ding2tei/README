@@ -55,7 +55,7 @@ $ cd src
 $ alex Language/Ding/AlexScanner.x
 $ happy Language/Ding/Parser/Line.y
 
-$ ghc -Wall -O2 Main -o ../ding2tei
+$ ghc -Wall -O2 -XRecursiveDo Main -o ../ding2tei
 
 
 How to run
